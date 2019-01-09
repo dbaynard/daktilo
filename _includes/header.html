@@ -11,25 +11,25 @@
 
     <ul class="social-links">
         {% if site.author.github %}
-            <a href="https://github.com/{{ site.author.github }}" class="social-links__entry" target="_blank">
+            <a href="https://github.com/{{ site.author.github }}" class="social-links__entry" target="_blank" rel="noopener">
                 <i class="fab fa-github"></i>
             </a>
         {% endif %}
 
         {% if site.author.twitter %}
-            <a href="https://twitter.com/{{ site.author.twitter }}" class="social-links__entry" target="_blank">
+            <a href="https://twitter.com/{{ site.author.twitter }}" class="social-links__entry" target="_blank" rel="noopener">
                 <i class="fab fa-twitter"></i>
             </a>
         {% endif %}
 
         {% if site.author.linkedin %}
-            <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" class="social-links__entry" target="_blank">
+            <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" class="social-links__entry" target="_blank" rel="noopener">
                 <i class="fab fa-linkedin"></i>
             </a>
         {% endif %}
 
         {% if site.author.publickey %}
-            <a href="{{ site.author.publickey | prepend: site.baseurl }}" class="social-links__entry" target="_blank">
+            <a href="{{ site.author.publickey | prepend: site.baseurl }}" class="social-links__entry">
                 <i class="fas fa-key"></i>
             </a>
         {% endif %}
