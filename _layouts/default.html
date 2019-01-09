@@ -23,11 +23,9 @@
 
     {% if site.license %}
         <footer>
-            <div class="wrapper license">
 
-                {{ site.license }}
+            {% include licenses/{{ site.license }}.html %}
 
-            </div>
         </footer>
     {% endif %}
 </html>
