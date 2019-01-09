@@ -16,7 +16,14 @@ a {
 
     section.page & {
         &[href^="http"], &[href^="//"] {
-            &:after { content: "⎆"; }
+            &:after {
+                font-family: "Font Awesome 5 Free";
+                content: "\f35d";
+                display: inline-block;
+                padding-left: 0.5em;
+                font-weight: 900;
+                transform: scale(0.6);
+            }
         }
     }
 }
