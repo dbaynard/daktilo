@@ -3,6 +3,7 @@
     <head>
         {% include meta_tags/base.html %}
         {% include meta_tags/sharing.html %}
+        {% include meta_tags/license.html %}
 
         {% include externals/styling.html %}
     </head>
@@ -21,10 +22,11 @@
     </body>
 
 
-    {% if site.license %}
+    {%- assign license = page.license | default: site.license -%}
+    {% if license %}
         <footer>
 
-            {% include licenses/{{ site.license }}.html %}
+            {% include licenses/{{ license }}.html %}
 
         </footer>
     {% endif %}

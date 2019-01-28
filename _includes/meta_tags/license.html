@@ -1,0 +1,6 @@
+{%- assign license = page.license | default: site.license -%}
+{% case license %}
+  {% when 'cc-by-sa' %}
+    <link rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  {% else %}
+{% endcase %}
