@@ -7,12 +7,10 @@ body {
     line-height: 32px;
 }
 
-section {
-
-    &.content {
-        max-width: 800px;
-        margin: 100px auto;
-    }
+header.page,
+section.content {
+    max-width: 800px;
+    margin: 100px auto;
 }
 
 a {
@@ -89,7 +87,7 @@ strong {
 }
 
 /* =Header */
-.header {
+header.page {
     overflow: hidden;
 }
 
@@ -274,11 +272,9 @@ header.post-title {
         line-height: 1.6;
     }
 
-    section {
-
-        &.content {
-            width: 80%;
-        }
+    header.header,
+    section.content {
+        width: 80%;
     }
 
     nav,
