@@ -85,6 +85,7 @@ strong {
     overflow: hidden;
 }
 
+nav,
 .navigation {
     float:left;
 }
@@ -148,16 +149,16 @@ strong {
     color: $cloudy;
 }
 
-.post-title {
+header.post-title {
     margin-bottom: 110px;
-}
 
-.post-title__text {
-    font-size: 40px;
-}
+    h1.post-title__text {
+        font-size: 40px;
+    }
 
-.post-title__subtitle {
-    font-size: 20px;
+    h2.post-title__subtitle {
+        font-size: 20px;
+    }
 }
 
 /* =Post teasers */
@@ -269,6 +270,7 @@ strong {
         width: 80%;
     }
 
+    nav,
     .navigation,
     .social-links {
         @include centered-block();
@@ -308,11 +310,14 @@ strong {
         margin-top: 80px;
     }
 
-    .post-title__text {
-        font-size: 28px;
-    }
+    header.post-title {
 
-    .post-title__subtitle {
-        font-size: 18px;
+        h1.post-title__text {
+            font-size: 28px;
+        }
+
+        h2.post-title__subtitle {
+            font-size: 18px;
+        }
     }
 }
