@@ -1,4 +1,7 @@
 <figure class="{{ include.class | default: 'default-figure' }}">
-    <img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: include.caption | xml_escape }}">
+    <img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: include.caption | xml_escape }}"
+    {% if include.width %}width="{{ include.width }}"{% endif %}
+    {% if include.height %}height="{{ include.height }}"{% endif %}
+    >
     <figcaption>{{ include.caption | markdownify }}</figcaption>
 </figure>
