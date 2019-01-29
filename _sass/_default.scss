@@ -7,6 +7,14 @@ body {
     line-height: 32px;
 }
 
+section {
+
+    &.content {
+        max-width: 800px;
+        margin: 100px auto;
+    }
+}
+
 a {
     color: $cloudy;
     font-weight: bold;
@@ -81,11 +89,6 @@ strong {
 }
 
 /* =Header */
-.wrapper {
-    max-width: 800px;
-    margin: 100px auto;
-}
-
 .header {
     overflow: hidden;
 }
@@ -271,8 +274,11 @@ header.post-title {
         line-height: 1.6;
     }
 
-    .wrapper {
-        width: 80%;
+    section {
+
+        &.content {
+            width: 80%;
+        }
     }
 
     nav,

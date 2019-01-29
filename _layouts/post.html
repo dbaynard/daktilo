@@ -1,12 +1,17 @@
 ---
 layout: default
 ---
+
+<article class="post">
+
 {% include post/title.html %}
 
-<div class="content">
+<section class="content">
     {{ content }}
-</div>
+</section>
 
 {% include post/about.html %}
 
 {% include externals/disqus.html %}
+
+</article>
