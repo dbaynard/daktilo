@@ -1,12 +1,12 @@
 <header class="header">
     <nav>
-        <a href="{{ '/' | prepend: site.baseurl }}" class="logo">{{ site.title }}</a>
+        <a href="{{ '/' | relative_url }}" class="logo">{{ site.title }}</a>
 
         <ul class="menu">
-            <li class="menu__entry"><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
-            <li class="menu__entry"><a href="{{ '/' | prepend: site.baseurl }}">Articles</a></li>
-            <li class="menu__entry"><a href="{{ '/puzzles' | prepend: site.baseurl }}">Puzzles</a></li>
-            <li class="menu__entry"><a href="{{ '/colophon' | prepend: site.baseurl }}">Colophon</a></li>
+            <li class="menu__entry"><a href="{{ '/about' | relative_url }}">About</a></li>
+            <li class="menu__entry"><a href="{{ '/' | relative_url }}">Articles</a></li>
+            <li class="menu__entry"><a href="{{ '/puzzles' | relative_url }}">Puzzles</a></li>
+            <li class="menu__entry"><a href="{{ '/colophon' | relative_url }}">Colophon</a></li>
         </ul>
     </nav>
 
@@ -30,7 +30,7 @@
         {% endif %}
 
         {% if site.author.publickey %}
-            <a href="{{ site.author.publickey | prepend: site.baseurl }}" class="social-links__entry">
+            <a href="{{ site.author.publickey | relative_url }}" class="social-links__entry">
                 <i class="fas fa-key"></i>
             </a>
         {% endif %}
