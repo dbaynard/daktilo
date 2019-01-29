@@ -3,3 +3,8 @@
     text-align: center;
     width: 100%;
 }
+
+@mixin letter-spaced($size) {
+    letter-spacing: $size;
+    text-indent: $size;
+}
