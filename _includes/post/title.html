@@ -1,4 +1,9 @@
 <header class="page-title post-title">
+
+{%- if page.cover -%}
+{% include image.html class="post-cover" alt="{{ page.cover.alt }}" caption="{{ page.cover.caption }}" src="{{ page.cover.src }}" %}
+{%- endif -%}
+
     <h1 class="page-title__text post-title__text">{{ page.title }}</h1>
     <h2 class="page-title__subtitle post-title__subtitle">{{ page.subtitle }}</h2>
 </header>
