@@ -1,0 +1,18 @@
+<li class="post-teaser">
+    <article class="post-teaser">
+
+    <header class="post-teaser">
+    <a href="{{ post.url | relative_url }}">
+        <span class="post-teaser__title">{{ post.title }}</span>
+        <span class="post-teaser__date">{{ post.date | date: "%d %B %Y" }}</span>
+    </a>
+    </header>
+
+    {%- if post.excerpt -%}
+    <section class="post-excerpt">
+        {{ post.excerpt }}
+    </section>
+    {%- endif -%}
+
+    </article>
+</li>

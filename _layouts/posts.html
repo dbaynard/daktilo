@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% include category/title.html %}
+
+<section class="content">
+<ul class="list-posts">
+    {% assign empty_category = true %}
+
+    {% for post in site.posts %}
+        {{ content }}
+    {% endfor %}
+
+    {% if empty_category %}
+        <li class="empty-post-list">
+            It seems that there are no articles on that category,
+            please go back <a href="/">home</a> to see the full list of articles.
+        </li>
+    {% endif %}
+</ul>
+</section>
+
+{% include page/explore.html %}

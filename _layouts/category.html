@@ -1,40 +1,8 @@
 ---
-layout: default
+layout: posts
 ---
-{% include category/title.html %}
 
-<section class="content">
-<ul class="list-posts">
-    {% assign empty_category = true %}
-    {% for post in site.posts %}
-        {% if post.categories contains page.category %}
-            <li class="post-teaser">
-                <article class="post-teaser">
-
-                <header class="post-teaser">
-                <a href="{{ post.url | relative_url }}">
-                    <span class="post-teaser__title">{{ post.title }}</span>
-                    <span class="post-teaser__date">{{ post.date | date: "%d %B %Y" }}</span>
-                </a>
-                </header>
-
-                <section class="post-excerpt">
-                    {{ post.excerpt }}
-                </section>
-
-                </article>
-            </li>
-            {% assign empty_category = false %}
-        {% endif %}
-    {% endfor %}
-
-    {% if empty_category %}
-        <li class="empty-post-list">
-            It seems that there are no articles on that category,
-            please go back <a href="/">home</a> to see the full list of articles.
-        </li>
-    {% endif %}
-</ul>
-</section>
-
-{% include page/explore.html %}
+{% if post.categories contains page.category or page.category != nil %}
+{% include post/teaser.html %}
+{% assign empty_category = false %}
+{% endif %}
