@@ -138,21 +138,21 @@ nav,
 }
 
 /* =Titles */
-.page-title {
+header.page-title {
     margin-top:100px;
     margin-bottom:125px;
     text-align: center;
-}
 
-.page-title__text {
-    font-weight: 700;
-    font-size: 70px;
-}
+    h1.page-title__text {
+        font-weight: 700;
+        font-size: 70px;
+    }
 
-.page-title__subtitle {
-    font-weight: 400;
-    font-size: 22px;
-    color: $cloudy;
+    h2.page-title__subtitle {
+        font-weight: 400;
+        font-size: 22px;
+        color: $cloudy;
+    }
 }
 
 header.post-title {
@@ -288,17 +288,17 @@ header.post-title {
         margin-top: 35px;
     }
 
-    .page-title {
+    header.page-title {
         margin-top: 80px;
         margin-bottom: 60px;
-    }
 
-    .page-title__text {
-        font-size: 40px;
-    }
+        h1.page-title__text {
+            font-size: 40px;
+        }
 
-    .page-title__subtitle {
-        font-size: 18px;
+        h2.page-title__subtitle {
+            font-size: 18px;
+        }
     }
 
     .post-teaser__title {
