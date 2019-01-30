@@ -3,15 +3,26 @@ layout: default
 ---
 {% include category/title.html %}
 
+<section class="content">
 <ul class="list-posts">
     {% assign empty_category = true %}
     {% for post in site.posts %}
         {% if post.categories contains page.category %}
             <li class="post-teaser">
+                <article class="post-teaser">
+
+                <header class="post-teaser">
                 <a href="{{ post.url | relative_url }}">
                     <span class="post-teaser__title">{{ post.title }}</span>
                     <span class="post-teaser__date">{{ post.date | date: "%d %B %Y" }}</span>
                 </a>
+                </header>
+
+                <section class="post-excerpt">
+                    {{ post.excerpt }}
+                </section>
+
+                </article>
             </li>
             {% assign empty_category = false %}
         {% endif %}
@@ -24,5 +35,6 @@ layout: default
         </li>
     {% endif %}
 </ul>
+</section>
 
 {% include page/explore.html %}
