@@ -2,7 +2,12 @@
 layout: posts
 ---
 
-{% if post.categories contains page.category or page.category != nil %}
+{% unless page.category %}
+{% include post/teaser.html %}
+{% assign empty_category = false %}
+{% endunless %}
+
+{% if post.categories contains page.category %}
 {% include post/teaser.html %}
 {% assign empty_category = false %}
 {% endif %}
