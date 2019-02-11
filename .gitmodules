@@ -1,0 +1,3 @@
+[submodule "assets/subs/solarized-gist"]
+	path = assets/subs/solarized-gist
+	url = https://github.com/tiborsimon/solarized-gist.git
